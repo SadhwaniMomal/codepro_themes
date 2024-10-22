@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education Layout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .tab-link {
+        color: #6c757d;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: inline-block;
+      }
+
+      .tab-link.active {
+        color: #6f42c1;
+        border-bottom: 2px solid #6f42c1;
+      }
+
+      .fade {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .show {
+        opacity: 1;
+      }
+
+      .content-section {
+        display: none;
+      }
+
+      .content-section.active {
+        display: block;
+      }
+
+      .small-img {
+        width: 200px;
+        bottom: -20px;
+        right: 0px;
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      /* Additional spacing for the list items */
+      .list-elements li {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container my-5">
+      <div class="text-center mb-4">
+        <span class="badge">Core Features
+         </span>
+        <h2 class="mt-3">
+          Why Choose <span class="highlight-text">Equity</span>
+        </h2>
+      </div>
+      <div class="row">
+        <!-- Tabs Section -->
+        <div class="col-md-12 text-center">
+          <a
+            href="#"
+            class="tab-link"
+            id="instructor-tab"
+            onclick="showContent('instructor')"
+            >   <i class="fa-solid fa-person-chalkboard"></i>  Expert Instructor</a
+          >
+          <a
+            href="#"
+            class="tab-link"
+            id="cost-tab"
+            onclick="showContent('cost')"
+            > <i class="fa-solid fa-wallet"></i>  Cost Effectiveness</a
+          >
+          <a
+            href="#"
+            class="tab-link"
+            id="flexible-tab"
+            onclick="showContent('flexible')"
+            > <i class="fa-solid fa-book-open-reader"></i> Flexible Learning</a
+          >
+          <a
+            href="#"
+            class="tab-link"
+            id="support-tab"
+            onclick="showContent('support')"
+            > <i class="fa-solid fa-headphones"></i>  24/7 Strong Support</a
+          >
+        </div>
+      </div>
+
+      <div class="row my-4">
+        <!-- Left Section with Images -->
+        <div class="col-md-6 position-relative mb-4">
+          <img
+            id="main-image"
+            src="./image/blog2.jpg"
+            alt="Group of students"
+            class="img-fluid rounded"
+          />
+          <img
+            id="small-image"
+            src="./image/about-xs.png"
+            alt="Student writing"
+            class="img-fluid rounded small-img position-absolute"
+          />
+        </div>
+
+        <!-- Right Section with Dynamic Content -->
+        <div class="col-md-6">
+          <div id="content-instructor" class="content-section active fade show">
+            <h1 class="fw-bold mb-4">
+             We provide education
+              through our Instructor
+            </h1>
+            <blockquote
+              class="blockquote bg-light p-3 border-start border-3 border-primary"
+            >
+              Education turns the filthy mind into open minds. The roots of
+              education are bitter, but the fruit is sweet shapes people’s life.
+            </blockquote>
+            <ul class="list-elements list-unstyled mt-4">
+              <li>
+                <i class="bi bi-dot text-warning"></i> Educated citizens bring
+                development in the country
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education is a power and
+                makes a person powerful
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education is a key to
+                success and freedom from all the forces
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education changes your
+                bad today into good tomorrow
+              </li>
+            </ul>
+          </div>
+
+          <div id="content-cost" class="content-section fade">
+            <h1 class="fw-bold mb-4">
+              Brings Opportunity of Unlimited Learning
+            </h1>
+            <blockquote
+              class="blockquote bg-light p-3 border-start border-3 border-primary"
+            >
+              Education turns the filthy mind into open minds. The roots of
+              education are bitter, but the fruit is sweet shapes people’s life
+            </blockquote>
+            <ul class="list-elements list-unstyled mt-4">
+              <li>
+                <i class="bi bi-dot text-warning"></i> Educated citizens bring
+                development in the country
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education is a power and
+                makes a person powerful
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education is a key to
+                success and freedom from all the forces
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education changes your
+                bad today into good tomorrow
+              </li>
+            </ul>
+          </div>
+
+          <div id="content-flexible" class="content-section fade">
+            <h1 class="fw-bold mb-4">
+              Learning always should be flexible and effective.
+            </h1>
+            <blockquote
+              class="blockquote bg-light p-3 border-start border-3 border-primary"
+            >
+              Education turns the filthy mind into open minds. The roots of
+              education are bitter, but the fruit is sweet shapes people’s life
+            </blockquote>
+            <ul class="list-elements list-unstyled mt-4">
+              <li>
+                <i class="bi bi-dot text-warning"></i> Educated citizens bring
+                development in the country
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education is a power and
+                makes a person powerful
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education is a key to
+                success and freedom from all the forces
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education changes your
+                bad today into good tomorrow
+              </li>
+            </ul>
+          </div>
+
+          <div id="content-support" class="content-section fade">
+            <h1 class="fw-bold mb-4">
+              We provide an exclusive support 24/7 hours.
+            </h1>
+            <blockquote
+              class="blockquote bg-light p-3 border-start border-3 border-primary"
+            >
+              Education turns the filthy mind into open minds. The roots of
+              education are bitter, but the fruit is sweet shapes people’s life
+            </blockquote>
+            <ul class="list-elements list-unstyled mt-4">
+              <li>
+                <i class="bi bi-dot text-warning"></i> Educated citizens bring
+                development in the country
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education is a power and
+                makes a person powerful
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education is a key to
+                success and freedom from all the forces
+              </li>
+              <li>
+                <i class="bi bi-dot text-warning"></i> Education changes your
+                bad today into good tomorrow
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <script>
+      function showContent(contentId) {
+        // Hide all content sections
+        const sections = document.querySelectorAll(".content-section");
+        sections.forEach(function (section) {
+          section.classList.remove("show");
+          section.classList.remove("active");
+        });
+
+        // Remove the 'active' class from all tabs
+        const tabs = document.querySelectorAll(".tab-link");
+        tabs.forEach(function (tab) {
+          tab.classList.remove("active");
+        });
+
+        // Show the selected content and add 'show' and 'active' classes
+        const contentElement = document.getElementById(`content-${contentId}`);
+        contentElement.classList.add("active");
+        setTimeout(() => contentElement.classList.add("show"), 10);
+
+        // Add the 'active' class to the selected tab
+        document.getElementById(`${contentId}-tab`).classList.add("active");
+
+        // Change the images based on the selected tab
+        changeImages(contentId);
+      }
+
+      // Function to change images based on the selected content
+      function changeImages(contentId) {
+        const mainImage = document.getElementById("main-image");
+        const smallImage = document.getElementById("small-image");
+
+        if (contentId === "instructor") {
+          mainImage.src = "./image/blog2.jpg";
+          smallImage.src = "./image/about-xs.png";
+        } else if (contentId === "cost") {
+          mainImage.src = "./image/about-md.png"; // Replace with the actual image path for "Cost Effectiveness"
+          smallImage.src = "./image/about-xs.png"; // Replace with the actual image path for "Cost Effectiveness"
+        } else if (contentId === "flexible") {
+          mainImage.src = "./image/blog1.png"; // Replace with the actual image path for "Flexible Learning"
+          smallImage.src = "./image/about-xs.png"; // Replace with the actual image path for "Flexible Learning"
+        } else if (contentId === "support") {
+          mainImage.src = "./image/blog1.png"; // Replace with the actual image path for "24/7 Support"
+          smallImage.src = "./image/about-xs.png"; // Replace with the actual image path for "24/7 Support"
+        }
+      }
+
+      // Ensure the correct tab is active when the page reloads
+      window.onload = function () {
+        const activeTab = localStorage.getItem("activeTab") || "instructor";
+        showContent(activeTab);
+      };
+
+      // Store the active tab in local storage to persist it on reload
+      document.querySelectorAll(".tab-link").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          const tabId = this.id.replace("-tab", "");
+          localStorage.setItem("activeTab", tabId);
+        });
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
